@@ -1,0 +1,25 @@
+atm system
+problem statement
+Card Insertion and Authentication,balance enquiry,cash withdrawal,money deposit,fund transfer,transcation history
+
+Solution
+
+class-atm,card,account,transaction,bank
+Singleton Pattern
+Bank Class: The Bank class is implemented as a Singleton to ensure that only one instance of the bank exists in the system. 
+This class manages all bank accounts, and having a single instance avoids inconsistencies in account management
+
+Strategy Pattern
+Transaction Class: The Transaction class can be used with the Strategy Pattern to handle different types of transactions (e.g., Withdraw, Deposit, Transfer).
+ Each transaction type is implemented as a separate class, making the system extensible if new transaction types need to be added later.
+
+State Pattern
+ATM Class: The ATM can be in different states like Idle, Authenticated, ProcessingTransaction, or DispensingCash. The State Pattern allows the ATM 
+to transition between these states depending on user actions. Each state is implemented as a separate class, which encapsulates state-specific behavior.
+
+Observer Pattern
+Card Class: The Card class can be implemented as a Subject in the Observer Pattern. It notifies the ATM system when the card is validated or rejected.
+ The ATM system (Observer) reacts to these changes by displaying appropriate messages to the user.
+
+
+single threading-user/pin validation, account balance update,
